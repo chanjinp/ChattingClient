@@ -37,6 +37,7 @@ namespace ChattingClient
 
                 c_Socket.Connect(c_ep);
                 Console.WriteLine("============= Success Connect =============");
+                Console.WriteLine("============= If you want exit, you must input \"Exit\" =============");
 
                 isConnected =  true;
             }
@@ -76,7 +77,6 @@ namespace ChattingClient
         {
             await Task.Run(() =>
             {
-
                 try
                 {
                     int receiveByte = c_Socket.Receive(buffer);
